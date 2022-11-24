@@ -1,5 +1,6 @@
 //====================================================================================================
 .header {
+	position: relative;
 
 	// .header__container
 	&__container {
@@ -14,9 +15,14 @@
 	&__logo {
 		width: rem(301);
 		margin-right: rem(60);
+		z-index: 6;
 
 		img {
 			width: 100%;
+		}
+
+		@media (max-width:$mobile) {
+			width: rem(200);
 		}
 
 		@media (max-width:$mobileSmall) {
@@ -29,7 +35,28 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media (max-width:$mobile) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translate(-110%, 0);
+			min-height: 100vh;
+			width: 100vw;
+			flex-direction: column-reverse;
+			justify-content: center;
+			background-color: #f5f3fe;
+			overflow-x: auto;
+			z-index: 5;
+			transition: all 0.2s ease 0s; 
+		}
 	}
+
+	
+}
+
+.menu-open .header__menu {
+	transform: translate(0, 0);
 }
 
 .menu {
@@ -45,6 +72,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+
+		@media (max-width:$mobile){
+			flex-direction: column; 
+		}
 	}
 
 	// .menu__item
@@ -75,6 +106,10 @@
 		&_active {
 			font-weight: 600;
 		}
+
+		@media (max-width:$mobile){
+			font-size: 20px;
+		}
 	}
 
 	// .menu__call
@@ -92,6 +127,7 @@
 		color: #336FEE;
 		margin-left: rem(8);
 		margin-right: rem(8);
+		z-index: 6;
 
 		img {
 			display: none;
@@ -116,6 +152,12 @@
 			}
 		}
 
+		@media (max-width:$mobile){
+			 position: absolute;
+			 top: 5px;
+			 right: 60px; 
+		}
+
 
 	}
 
@@ -131,6 +173,10 @@
 		color: #336FEE;
 		width: rem(53);
 		height: rem(53);
+
+		@media (max-width:$mobile){
+			 margin: rem(10) auto; 
+		}
 
 		.select__value {
 			padding: 0px 12px;
@@ -164,7 +210,6 @@
 	}
 }
 
-.icon-menu {}
 
 //====================================================================================================
 
@@ -179,6 +224,10 @@
 		width: rem(30);
 		height: rem(18);
 		z-index: 5;
+		position: absolute;
+		top: 22px;
+		right: 20px;
+		z-index: 6;
 
 		@media (any-hover: none) {
 			cursor: default;

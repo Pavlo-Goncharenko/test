@@ -3,43 +3,42 @@
 
 		<a href="/" class="header__logo"><img src="@img/logo.svg" alt="logo"></a>
 
-		<div class="header__menu menu">
+		<button type="button" class="menu__icon icon-menu"><span></span></button>
 
-			<button type="button" class="menu__icon icon-menu"><span></span></button>
+		<div class="header__menu menu">
 
 			<nav class="menu__body">
 				<ul class="menu__list">
 					<li class="menu__item">
-						<a href="" class="menu__link menu__link_active">Навчання</a>
+						<a href="" class="menu__link menu__link_active">Education</a>
 					</li>
 					<li class="menu__item">
-						<a href="" class="menu__link">Про нас</a>
+						<a href="" class="menu__link">About us</a>
 					</li>
 					<li class="menu__item">
-						<a href="" class="menu__link">Новини</a>
+						<a href="" class="menu__link">News</a>
 					</li>
 					<li class="menu__item">
-						<a href="" class="menu__link">Статті</a>
+						<a href="" class="menu__link">Articles</a>
 					</li>
 					<li class="menu__item">
-						<a href="" class="menu__link">Відгуки</a>
+						<a href="" class="menu__link">Reviews</a>
 					</li>
 					<li class="menu__item">
-						<a href="" class="menu__link">Контакти</a>
+						<a href="" class="menu__link">Contacts</a>
 					</li>
 				</ul>
 			</nav>
 
-				<a href="" class="menu__call">
-					<span>Консультація</span>
-					<img src="@img/phone.svg" alt="phone">
-				</a>
-
+			<a href="" data-da=".header__container, 768" class="menu__call">
+				<span>Advice</span>
+				<img src="@img/icons/phone.svg" alt="call">
+			</a>
 
 			<div class="menu__languages">
-				<select name="form[]" data-class-modif="form">
-					<option value="1" selected>UA</option>
-					<option value="2">EN</option>
+				<select name="languages-form" data-class-modif="form">
+					<option value="1">UA</option>
+					<option value="2" selected>EN</option>
 				</select>
 			</div>
 		</div>

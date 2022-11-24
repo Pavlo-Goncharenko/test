@@ -145,7 +145,7 @@ body {
 
 // Подключение стилей отдельных блоков
 @import "header";
-@import "footer";
-
-// Подключение стилей отдельных страниц
-@import "home";
+@import "section-1";
+@import "section-2";
+@import "section-3";
+@import "section-4";
