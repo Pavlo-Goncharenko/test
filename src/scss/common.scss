@@ -4,3 +4,37 @@ body {
 	font-style: normal;
 	font-weight: 400;
 }
+
+// 
+.anim-upwards {
+	transform: translate(0, 20px);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+.anim-upwards._watcher-view {
+	transform: translate(0, 0);
+	opacity: 1;
+}
+
+// 
+.anim-upwards-2 {
+	transform: translate(0, 20px);
+	opacity: 0;
+	transition: all 0.8s ease 0.4s;
+}
+
+.anim-upwards-2._watcher-view {
+	transform: translate(0, 0);
+	opacity: 1;
+}
+
+// 
+.anim-opasity {
+	opacity: 0.3;
+	transition: all 0.8s ease 0s;
+}
+
+.anim-opasity._watcher-view {
+	opacity: 1;
+}

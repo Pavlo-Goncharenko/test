@@ -348,20 +348,27 @@
 
 .swiper-2 {}
 
+.banner__container {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 20px 20px 250px;
+
+	
+	@media (max-width:$tablet){
+		flex-direction: column;
+		padding: 90px 20px 20px 20px;
+	}
+}
+
+
 .banner {
 	margin-top: rem(50);
 	background: url('@img/section-3/backgroun-big.jpg') 0 0 no-repeat;
 	background-color: #ffea81;
 	background-size: cover;
-	padding: 20px 20px 20px 250px;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
 
-	@media (max-width:$tablet){
-		flex-direction: column;
-		padding: 90px 20px 20px 20px;
-	}
+	width: 100%;
+
 }
 
 .banner-text {
